@@ -2,7 +2,7 @@
   "main": "node_modules/expo/AppEntry.js",
   "husky": {
     "hooks": {
-      "pre-push": "jest --updateSnapshot && npm test"
+      "pre-push": "npm run test:types && jest --updateSnapshot && npm test"
     }
   },
   "jest": {
@@ -41,7 +41,8 @@
   "scripts": {
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "tsc --project . --noEmit && jest",
+    "test": "jest",
+    "test:types": "tsc --project . --noEmit",
     "test:coverage": "npm test -- --coverage=false",
     "start": "expo start",
     "eject": "expo eject",
