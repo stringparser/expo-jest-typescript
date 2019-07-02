@@ -17,7 +17,6 @@
       "**/__tests__/**/*.ts?(x)",
       "**/?(*.)+(spec|test).ts?(x)"
     ],
-    "collectCoverage": true,
     "collectCoverageFrom": [
       "**/*.{ts,tsx}",
       "!**/coverage/**",
@@ -38,6 +37,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest",
+    "test:coverage": "npm test -- --coverage=false",
     "start": "expo start",
     "eject": "expo eject",
     "android": "expo start --android"
