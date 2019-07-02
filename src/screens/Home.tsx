@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { Text } from 'react-native';
-import { NavigateToChatButton } from './Chat';
+import { NavigateToCardButton } from './Card';
 import Container from '../components/Container';
 import { NavigationScreenProps } from 'react-navigation';
 
 const Main: React.SFC<NavigationScreenProps> = (props) => (
   <Container>
     <Text>Main</Text>
-    <NavigateToChatButton {...props} />
+    <NavigateToCardButton {...props} />
   </Container>
 );
 

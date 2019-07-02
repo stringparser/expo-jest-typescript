@@ -1,4 +1,4 @@
-import Chat from './Chat';
+import Card from './Card';
 import Home from './Home';
 import { createStackNavigator } from 'react-navigation';
 
@@ -11,9 +11,9 @@ const Navigator = createStackNavigator(
         header: null,
       })
     },
-    Chat: {
+    Card: {
       path: 'chat',
-      screen: Chat
+      screen: Card
     },
   }
 );
