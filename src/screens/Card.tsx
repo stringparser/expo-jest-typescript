@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Button, Text } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
+
 import Container from '../components/Container';
 
 export const NavigateToCardButton: React.SFC<NavigationScreenProps> = ({ navigation }) => (

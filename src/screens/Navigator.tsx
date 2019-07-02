@@ -1,6 +1,7 @@
+import { createStackNavigator } from 'react-navigation';
+
 import Card from './Card';
 import Home from './Home';
-import { createStackNavigator } from 'react-navigation';
 
 const Navigator = createStackNavigator(
   {
@@ -8,13 +9,23 @@ const Navigator = createStackNavigator(
       path: '',
       screen: Home,
       navigationOptions: () => ({
-        header: null,
+        title: 'Welcome'
       })
     },
     Card: {
-      path: 'chat',
-      screen: Card
+      path: 'card',
+      screen: Card,
+      navigationOptions: () => ({
+        title: 'Card Title',
+      })
     },
+  },
+  {
+    cardStyle: {
+      height: '100%',
+    },
+    cardShadowEnabled: false,
+    headerLayoutPreset: 'left',
   }
 );
 
