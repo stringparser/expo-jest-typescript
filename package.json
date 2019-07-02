@@ -2,7 +2,8 @@
   "main": "node_modules/expo/AppEntry.js",
   "husky": {
     "hooks": {
-      "pre-push": "npm run test:types && jest --updateSnapshot && npm test"
+      "pre-push": "npm test",
+      "pre-commit": "npm run test:types && jest --updateSnapshot"
     }
   },
   "jest": {
