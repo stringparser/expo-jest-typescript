@@ -1,10 +1,23 @@
 {
   "compilerOptions": {
-    "noEmit": true,
-    "lib": ["dom", "esnext"],
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     "jsx": "react-native",
+    "paths": {
+      "*": [
+        "*",
+        "*.ios",
+        "*.web",
+        "*.native",
+        "*.android"
+      ]
+    },
+    "noEmit": true,
+    "baseUrl": ".",
+    "skipLibCheck": true,
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
+    "allowSyntheticDefaultImports": true
   }
 }
