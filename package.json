@@ -1,11 +1,5 @@
 {
   "main": "node_modules/expo/AppEntry.js",
-  "husky": {
-    "hooks": {
-      "pre-push": "npm test",
-      "pre-commit": "npm run test:types && jest --updateSnapshot"
-    }
-  },
   "jest": {
     "preset": "jest-expo",
     "globals": {
@@ -39,15 +33,21 @@
       "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|sentry-expo|native-base)"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test",
+      "pre-commit": "npm run test:types && jest --updateSnapshot"
+    }
+  },
   "scripts": {
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest",
-    "test:types": "tsc --project . --noEmit",
-    "test:coverage": "npm test -- --coverage=false",
     "start": "expo start",
     "eject": "expo eject",
-    "android": "expo start --android"
+    "android": "expo start --android",
+    "test:types": "tsc --project . --noEmit",
+    "test:coverage": "npm test -- --coverage=false"
   },
   "private": true,
   "dependencies": {
@@ -61,18 +61,18 @@
     "@react-navigation/core": "^3.4.2"
   },
   "devDependencies": {
+    "jest": "^24.8.0",
+    "husky": "^3.0.0",
+    "ts-jest": "^24.0.2",
+    "jest-expo": "^33.0.2",
+    "typescript": "^3.4.5",
     "@types/expo": "^32.0.13",
     "@types/jest": "^24.0.15",
     "@types/react": "^16.8.19",
     "@types/react-dom": "^16.8.4",
     "@types/react-native": "^0.57.60",
-    "@types/react-navigation": "^3.0.7",
-    "@types/react-test-renderer": "^16.8.2",
-    "husky": "^3.0.0",
-    "jest": "^24.8.0",
-    "jest-expo": "^33.0.2",
     "react-test-renderer": "^16.8.6",
-    "ts-jest": "^24.0.2",
-    "typescript": "^3.4.5"
+    "@types/react-navigation": "^3.0.7",
+    "@types/react-test-renderer": "^16.8.2"
   }
 }
