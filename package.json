@@ -41,7 +41,7 @@
   "scripts": {
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "jest",
+    "test": "tsc --project . --noEmit && jest",
     "test:coverage": "npm test -- --coverage=false",
     "start": "expo start",
     "eject": "expo eject",
