@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Text } from 'react-native';
 import { NavigateToChatButton } from './Chat';
 import Container from '../components/Container';

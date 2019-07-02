@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Button, Text } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import Container from '../components/Container';
