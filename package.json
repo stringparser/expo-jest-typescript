@@ -1,5 +1,10 @@
 {
   "main": "node_modules/expo/AppEntry.js",
+  "husky": {
+    "hooks": {
+      "pre-push": "jest --updateSnapshot && npm test"
+    }
+  },
   "jest": {
     "preset": "jest-expo",
     "globals": {
@@ -61,6 +66,7 @@
     "@types/react-native": "^0.57.60",
     "@types/react-navigation": "^3.0.7",
     "@types/react-test-renderer": "^16.8.2",
+    "husky": "^3.0.0",
     "jest": "^24.8.0",
     "jest-expo": "^33.0.2",
     "react-test-renderer": "^16.8.6",
