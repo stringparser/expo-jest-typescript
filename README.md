@@ -1,0 +1,1 @@
+# expo-jest-typescript-starter
