@@ -4,8 +4,11 @@ import { createStackNavigator } from 'react-navigation';
 const Router = createStackNavigator(
   {
     Main: {
-      path: '/',
-      screen: lazy(() => import('../screens/Home'))
+      path: '',
+      screen: lazy(() => import('../screens/Home')),
+      navigationOptions: () => ({
+        header: null,
+      })
     },
     Chat: {
       path: 'chat',
@@ -13,7 +16,10 @@ const Router = createStackNavigator(
     },
   },
   {
-    headerMode: 'none'
+    cardStyle: {
+      height: '100%'
+    },
+    initialRouteKey: 'Main',
   }
 );
 
