@@ -1,17 +1,11 @@
-import React, { Suspense } from 'react';
 import { Platform } from 'react-native';
-import Router from './components/Router';
-import Loading from './components/Loading';
+import Navigator from './screens/Navigator';
 import { createAppContainer } from 'react-navigation';
 import { createBrowserApp } from '@react-navigation/web';
 
 const Application = Platform.OS === 'web'
-  ? createBrowserApp(Router)
-  : createAppContainer(Router)
+  ? createBrowserApp(Navigator)
+  : createAppContainer(Navigator)
 ;
 
-export default () => (
-  <Suspense fallback={<Loading />}>
-    <Application />
-  </Suspense>
-);
+export default Application;
